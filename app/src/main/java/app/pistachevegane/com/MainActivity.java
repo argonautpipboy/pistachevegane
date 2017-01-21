@@ -1,4 +1,4 @@
-package mycookbook.a2p.com.mycookbook;
+package app.pistachevegane.com;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.ic_menu_camera);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#048B9A</color>
+    <color name="colorPrimary">#676463</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#D1B606</color>
-    <color name="colorError">#B82010</color>
+
+    <color name="colorBackground">#43403F</color>
+    <color name="colorReceipeTitle">#7FAF39</color>
+    <color name="colorSurroundCard">#70A434</color>
+    <color name="colorCard">#676463</color>
+    <color name="colorWrong">#B33F43</color>
+    <color name="colorText">#F8F7F5</color>
 </resources>

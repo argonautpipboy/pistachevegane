@@ -16,32 +16,32 @@ public class RecipesActivity extends CommonActivity {
         setContentView(R.layout.activity_recipes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_recipes);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.menu_item_receipesbyingredients);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_recipes);
+        navigationView = (NavigationView) findViewById(R.id.nav_view_recipes);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(2).setChecked(true);
     }
 
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    protected void onRestart() {
+        if(navigationView != null){
+            navigationView.getMenu().getItem(2).setChecked(true);
+            super.onRestart();
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
-        drawer.closeDrawer(GravityCompat.START);
+        if(drawer != null){
+            drawer.closeDrawer(GravityCompat.START);
+        }
         return super.onNavigationItemSelected(item);
     }
 }

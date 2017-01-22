@@ -16,32 +16,32 @@ public class AlternativesVeganActivity extends CommonActivity {
         setContentView(R.layout.activity_alternativesvegan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_alternativevegan);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.menu_item_alternativesvegans);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_alternativesvegan);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout_alternativesvegan);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_alternativesvegan);
+        navigationView = (NavigationView) findViewById(R.id.nav_view_alternativesvegan);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(3).setChecked(true);
     }
 
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_alternativesvegan);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    protected void onRestart() {
+        if(navigationView != null){
+            navigationView.getMenu().getItem(3).setChecked(true);
+            super.onRestart();
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_alternativesvegan);
-        drawer.closeDrawer(GravityCompat.START);
+        if(drawer != null){
+            drawer.closeDrawer(GravityCompat.START);
+        }
         return super.onNavigationItemSelected(item);
     }
 }

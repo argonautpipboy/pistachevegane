@@ -9,6 +9,10 @@ import android.view.MenuItem;
 
 public class CommonActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    protected NavigationView navigationView = null;
+    protected DrawerLayout drawer = null;
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -34,5 +38,16 @@ public class CommonActivity extends AppCompatActivity
             startActivity(intent);
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawer != null) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
+        }
     }
 }

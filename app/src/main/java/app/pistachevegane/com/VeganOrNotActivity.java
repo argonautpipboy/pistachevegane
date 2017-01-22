@@ -16,6 +16,7 @@ public class VeganOrNotActivity extends CommonActivity {
         setContentView(R.layout.activity_veganornot);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_veganornot);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.menu_item_veganornot);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_veganornot);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -23,9 +24,17 @@ public class VeganOrNotActivity extends CommonActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_veganornot);
+        navigationView = (NavigationView) findViewById(R.id.nav_view_veganornot);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(4).setChecked(true);
+    }
+
+    @Override
+    protected void onRestart() {
+        if(navigationView != null){
+            navigationView.getMenu().getItem(4).setChecked(true);
+            super.onRestart();
+        }
     }
 
     @Override

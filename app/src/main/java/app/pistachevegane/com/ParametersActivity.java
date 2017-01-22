@@ -13,11 +13,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import app.pistachevegane.com.components.ExpandableListAdapter;
+import app.pistachevegane.com.components.ParameterListAdapter;
 
 public class ParametersActivity extends CommonActivity {
 
-    private ExpandableListAdapter listAdapter;
+    private ParameterListAdapter listAdapter;
     private ExpandableListView expListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
@@ -44,7 +44,7 @@ public class ParametersActivity extends CommonActivity {
         expListView = (ExpandableListView) findViewById(R.id.list_params);
         // prepare the datas
         prepareDatas();
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new ParameterListAdapter(this, listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
     }

@@ -7,6 +7,7 @@
     <color name="colorBackground">#43403F</color>
     <color name="colorReceipeTitle">#7FAF39</color>
     <color name="colorSurroundCard">#70A434</color>
+    <color name="colorBackgroundSearch">#565352</color>
     <color name="colorCard">#676463</color>
     <color name="colorWrong">#B33F43</color>
     <color name="colorText">#F8F7F5</color>

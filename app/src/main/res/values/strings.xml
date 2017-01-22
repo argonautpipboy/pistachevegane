@@ -20,4 +20,7 @@
     <string name="parameters_label_contactus">0123456789</string>
     <string name="parameters_label_licenceandthanks1">Nous acceptons de manger des cailloux pour le restant de nos jours.</string>
     <string name="parameters_label_licenceandthanks2">Merci à mon ami pipboy d\'avoir fait cette super appli.</string>
+
+    <!-- my recipes activity strings -->
+    <string name="myrecipes_hint_searchbar">Rechercher</string>
 </resources>

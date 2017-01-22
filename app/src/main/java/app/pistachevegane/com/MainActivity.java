@@ -15,6 +15,7 @@ public class MainActivity extends CommonActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        toolbar.setLogo(R.drawable.img_logo_header);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.app_name);
 

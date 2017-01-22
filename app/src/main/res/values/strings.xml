@@ -11,4 +11,13 @@
     <string name="menu_item_alternativesvegans">ALTERNATIVES VÉGANES</string>
     <string name="menu_item_veganornot">VEGAN OU NON</string>
     <string name="menu_item_parameters">PARAMÈTRES</string>
+
+    <!-- parameter activity strings -->
+    <string name="parameters_title_whoweare">Qui sommes nous?</string>
+    <string name="parameters_title_contactus">Nous contacter</string>
+    <string name="parameters_title_licenceandthanks">Licences et remerciements</string>
+    <string name="parameters_label_whoweare">Nous sommes vegan et fières de l\'être</string>
+    <string name="parameters_label_contactus">0123456789</string>
+    <string name="parameters_label_licenceandthanks1">Nous acceptons de manger des cailloux pour le restant de nos jours.</string>
+    <string name="parameters_label_licenceandthanks2">Merci à mon ami pipboy d\'avoir fait cette super appli.</string>
 </resources>

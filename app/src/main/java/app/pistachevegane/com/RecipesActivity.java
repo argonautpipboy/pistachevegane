@@ -8,30 +8,29 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class MainActivity extends CommonActivity {
+public class RecipesActivity extends CommonActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setContentView(R.layout.activity_recipes);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_recipes);
         setSupportActionBar(toolbar);
-        toolbar.setLogo(R.drawable.ic_menu_camera);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_main);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_main);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_recipes);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(2).setChecked(true);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_main);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -41,7 +40,7 @@ public class MainActivity extends CommonActivity {
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_main);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_recipes);
         drawer.closeDrawer(GravityCompat.START);
         return super.onNavigationItemSelected(item);
     }

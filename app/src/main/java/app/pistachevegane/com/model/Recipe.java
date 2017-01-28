@@ -1,12 +1,21 @@
 package app.pistachevegane.com.model;
 
 public class Recipe {
+    private Long id;
     private String title;
     private String type;
     private String labelTime;
     private Integer timeToCook;
     private String complexity;
     private Integer identifierDrawablePicture;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

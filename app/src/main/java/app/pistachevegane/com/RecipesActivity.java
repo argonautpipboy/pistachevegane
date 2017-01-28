@@ -89,27 +89,27 @@ public class RecipesActivity extends CommonActivity {
         recipes = new ArrayList<Recipe>();
         Recipe recipe1 = new Recipe();
         recipe1.setTitle("Bun's aux légumes d'été");
-        recipe1.setComplexity("Technique");
+        recipe1.setComplexity("HARD");
         recipe1.setIdentifierDrawablePicture(1);
         recipe1.setLabelTime("60 Min");
-        recipe1.setTimeToCook(3600);
-        recipe1.setType("Plat");
+        recipe1.setTimeToCook(10);
+        recipe1.setType("ENTREE");
 
         Recipe recipe2 = new Recipe();
         recipe2.setTitle("Lasagnes, Légumes et Soja");
-        recipe2.setComplexity("Facile");
+        recipe2.setComplexity("EASY");
         recipe2.setIdentifierDrawablePicture(2);
         recipe2.setLabelTime("60 Min");
-        recipe2.setTimeToCook(3600);
-        recipe2.setType("Plat");
+        recipe2.setTimeToCook(30);
+        recipe2.setType("PLAT");
 
         Recipe recipe3 = new Recipe();
         recipe3.setTitle("Le superbe flageolet burger");
-        recipe3.setComplexity("Très facile");
+        recipe3.setComplexity("VEASY");
         recipe3.setIdentifierDrawablePicture(1);
         recipe3.setLabelTime("20 Min");
-        recipe3.setTimeToCook(1200);
-        recipe3.setType("Plat");
+        recipe3.setTimeToCook(60);
+        recipe3.setType("DESSERT");
 
         recipes.add(recipe1);
         recipes.add(recipe2);

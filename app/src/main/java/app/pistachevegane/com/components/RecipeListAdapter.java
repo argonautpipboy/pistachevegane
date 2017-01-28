@@ -73,8 +73,8 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.imageCardRecipe.setImageDrawable(getContext().getResources().getDrawable(getContext().getResources()
-                .getIdentifier("d002_p00"+mDisplayedValues.get(position).getIdentifierDrawablePicture(), "drawable", getContext().getPackageName())));
+        //holder.imageCardRecipe.setImageDrawable(getContext().getResources().getDrawable(getContext().getResources()
+        //        .getIdentifier("d002_p00"+mDisplayedValues.get(position).getIdentifierDrawablePicture(), "drawable", getContext().getPackageName())));
         holder.titleCardRecipe.setText(mDisplayedValues.get(position).getTitle());
         holder.typeCardRecipe.setImageDrawable(getImageType(mDisplayedValues.get(position).getType()));
         holder.timeCardRecipe.setImageDrawable(getImageTime(mDisplayedValues.get(position).getTimeToCook()));
@@ -91,7 +91,7 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
     }
 
     private Drawable getImageType(String type){
-        Drawable result = getContext().getResources().getDrawable(R.drawable.img_no_images);
+        Drawable result = getContext().getResources().getDrawable(R.drawable.img_ic_photos);
         switch(type){
             case "ENTREE":
                 result = getContext().getResources().getDrawable(R.drawable.img_recette_cat_1);
@@ -107,7 +107,7 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
     }
 
     private Drawable getImageTime(Integer type){
-        Drawable result = getContext().getResources().getDrawable(R.drawable.img_no_images);
+        Drawable result = getContext().getResources().getDrawable(R.drawable.img_ic_photos);
         switch(type){
             case 5:
                 result = getContext().getResources().getDrawable(R.drawable.img_recette_time_5m);
@@ -135,7 +135,7 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
     }
 
     private Drawable getImageComplexity(String type){
-        Drawable result = getContext().getResources().getDrawable(R.drawable.img_no_images);
+        Drawable result = getContext().getResources().getDrawable(R.drawable.img_ic_photos);
         switch(type){
             case "VEASY":
                 result = getContext().getResources().getDrawable(R.drawable.img_recette_dif_1);

@@ -19,17 +19,21 @@
     <EditText android:id="@+id/inputSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
         android:hint="@string/myrecipes_hint_searchbar"
+        android:textColorHint="@color/colorHintText"
         android:inputType="textVisiblePassword"
         android:background="@drawable/round_corner"
         android:gravity="center"
-        android:padding="10dp"
-        android:layout_marginBottom="5dp"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
         android:drawableLeft="@drawable/ic_menu_camera"/>
 
     <ListView
         android:id="@+id/list_myrecipes"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"/>
 </LinearLayout>

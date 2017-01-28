@@ -11,4 +11,5 @@
     <color name="colorCard">#676463</color>
     <color name="colorWrong">#B33F43</color>
     <color name="colorText">#F8F7F5</color>
+    <color name="colorHintText">#C3C1C0</color>
 </resources>

@@ -12,4 +12,6 @@
     <color name="colorWrong">#B33F43</color>
     <color name="colorText">#F8F7F5</color>
     <color name="colorHintText">#C3C1C0</color>
+
+    <color name="colorTransparent">#00FFFFFF</color>
 </resources>

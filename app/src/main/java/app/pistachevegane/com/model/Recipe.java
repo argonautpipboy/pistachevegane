@@ -1,8 +1,14 @@
 package app.pistachevegane.com.model;
 
-public class Recipe {
+import java.io.Serializable;
+import java.util.List;
+
+public class Recipe implements Serializable{
     private Long id;
     private String title;
+    private String descriptionRecipe;
+    private List<Ingredient> ingredients;
+    private List<CookingStep> cookingSteps;
     private String type;
     private String labelTime;
     private Integer timeToCook;
@@ -63,5 +69,29 @@ public class Recipe {
 
     public void setIdentifierDrawablePicture(Integer identifierDrawablePicture) {
         this.identifierDrawablePicture = identifierDrawablePicture;
+    }
+
+    public String getDescriptionRecipe() {
+        return descriptionRecipe;
+    }
+
+    public void setDescriptionRecipe(String descriptionRecipe) {
+        this.descriptionRecipe = descriptionRecipe;
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public List<CookingStep> getCookingSteps() {
+        return cookingSteps;
+    }
+
+    public void setCookingSteps(List<CookingStep> cookingSteps) {
+        this.cookingSteps = cookingSteps;
     }
 }

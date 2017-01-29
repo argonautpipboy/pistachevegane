@@ -1,5 +1,7 @@
 package app.pistachevegane.com;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -19,16 +23,18 @@ import app.pistachevegane.com.components.RecipeListAdapter;
 import app.pistachevegane.com.model.Recipe;
 
 public class MainActivity extends CommonActivity {
-
     private ListView lv;
     private RecipeListAdapter adapter;
     private EditText inputSearch;
     private List<Recipe> recipes;
+    private Context mainActivityContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainActivityContext = this;
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         toolbar.setLogo(R.drawable.img_logo_header);
         setSupportActionBar(toolbar);
@@ -47,11 +53,21 @@ public class MainActivity extends CommonActivity {
         // Manage search and list initialisation
         initialiseListRecipes();
         lv = (ListView) findViewById(R.id.list_myrecipes);
-        inputSearch = (EditText) findViewById(R.id.inputSearch);
         // Adding items to listview
         adapter = new RecipeListAdapter(this, recipes);
         lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Recipe selectedFromList = (Recipe) (lv.getItemAtPosition(position));
+                Intent intent = new Intent(mainActivityContext, RecipeDetailActivity.class);
+                intent.putExtra("RecipeToPrint", selectedFromList);
+                startActivity(intent);
+            }
+        });
         adapter.notifyDataSetChanged();
+
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
         inputSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {

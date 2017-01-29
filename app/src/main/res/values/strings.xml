@@ -23,4 +23,7 @@
 
     <!-- my recipes activity strings -->
     <string name="myrecipes_hint_searchbar">Rechercher</string>
+    <string name="title_presentation">Présentation</string>
+    <string name="title_tab_ingredients">Ingrédients</string>
+    <string name="title_tab_realisation">Réalisation</string>
 </resources>

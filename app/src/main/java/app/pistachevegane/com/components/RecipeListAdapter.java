@@ -62,7 +62,7 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
         if (convertView == null) {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.item_recipe, null);
-            holder.titleConainterCardRecipe = (LinearLayout) convertView.findViewById(R.id.titleConainterCardRecipe);
+            holder.titleConainterCardRecipe = (LinearLayout) convertView.findViewById(R.id.titleContainerCardRecipe);
             holder.imageCardRecipe = (ImageView) convertView.findViewById(R.id.imageCardRecipe);
             holder.titleCardRecipe = (TextView) convertView.findViewById(R.id.titleCardRecipe);
             holder.typeCardRecipe = (ImageView) convertView.findViewById(R.id.typeCardRecipe);
@@ -79,13 +79,6 @@ public class RecipeListAdapter extends ArrayAdapter<Recipe> implements Filterabl
         holder.typeCardRecipe.setImageDrawable(getImageType(mDisplayedValues.get(position).getType()));
         holder.timeCardRecipe.setImageDrawable(getImageTime(mDisplayedValues.get(position).getTimeToCook()));
         holder.complexityCardRecipe.setImageDrawable(getImageComplexity(mDisplayedValues.get(position).getComplexity()));
-
-        holder.titleConainterCardRecipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         return convertView;
     }

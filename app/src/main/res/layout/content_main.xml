@@ -22,7 +22,7 @@
         android:textColor="@color/colorText"
         android:hint="@string/myrecipes_hint_searchbar"
         android:textColorHint="@color/colorHintText"
-        android:inputType="textVisiblePassword"
+        android:inputType="textCapSentences|textAutoCorrect"
         android:background="@drawable/round_corner"
         android:gravity="center"
         android:padding="5dp"

@@ -51,7 +51,7 @@ public class MainActivity extends CommonActivity {
         navigationView.getMenu().getItem(0).setChecked(true);
 
         // Manage search and list initialisation
-        initialiseListRecipes();
+        initializeListRecipes();
         lv = (ListView) findViewById(R.id.list_myrecipes);
         // Adding items to listview
         adapter = new RecipeListAdapter(this, recipes);
@@ -101,7 +101,7 @@ public class MainActivity extends CommonActivity {
         return super.onNavigationItemSelected(item);
     }
 
-    private void initialiseListRecipes(){
+    private void initializeListRecipes(){
         recipes = new ArrayList<Recipe>();
         Recipe recipe1 = new Recipe();
         recipe1.setTitle("Bun's aux légumes d'été");

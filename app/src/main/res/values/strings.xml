@@ -26,4 +26,8 @@
     <string name="title_presentation">Présentation</string>
     <string name="title_tab_ingredients">Ingrédients</string>
     <string name="title_tab_realisation">Réalisation</string>
+
+    <!-- my recipes activity strings -->
+    <string name="veganproduct_source_animal">Animal</string>
+    <string name="veganproduct_source_vegan">Vegan</string>
 </resources>

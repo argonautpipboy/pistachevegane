@@ -20,11 +20,11 @@ public class RecipeDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recipe_details);
         this.overridePendingTransition(R.anim.enter, R.anim.exit);
 
-        viewPager = (ViewPager) findViewById(R.id.recipeDetailsViewPager);
-        setupViewPager(viewPager);
+        //viewPager = (ViewPager) findViewById(R.id.recipeDetailsViewPager);
+        //setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) findViewById(R.id.recipeDetailsTabs);
-        tabLayout.setupWithViewPager(viewPager);
+        //tabLayout = (TabLayout) findViewById(R.id.recipeDetailsTabs);
+        //tabLayout.setupWithViewPager(viewPager);
 
     }
 

@@ -73,7 +73,7 @@ public class VeganProductListAdapter extends ArrayAdapter<VeganProduct> implemen
         holder.titleVeganProduct.setText(mDisplayedValues.get(position).getTitleProduct());
         holder.typeVeganProduct.setText(mDisplayedValues.get(position).getTypeProduct());
         holder.sourceVeganProduct.setText(mDisplayedValues.get(position).getSourceProduct());
-        if(mDisplayedValues.get(position).getSourceProduct().equals(R.string.veganproduct_source_animal)){
+        if(mDisplayedValues.get(position).getSourceProduct().equals(context.getResources().getString(R.string.veganproduct_source_animal))){
             holder.backgroundLeftVeganProduct.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWrong));
             holder.backgroundRightVeganProduct.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWrong));
         } else{

@@ -9,14 +9,16 @@
         android:id="@+id/item_veganproduct_backgroundLeft"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="0.05"
+        android:layout_weight="0.1"
         android:textColor="@color/colorWrong"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="0.9"
+        android:layout_weight="0.8"
         android:background="@color/colorCard"
-        android:orientation="horizontal">
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,31 +28,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginTop="-3dp"
                 android:layout_marginLeft="10dp"
+                android:textSize="18sp"
                 android:textColor="@color/colorText"/>
             <TextView
                 android:id="@+id/item_veganproduct_typeVeganProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginTop="-3dp"
                 android:layout_marginLeft="10dp"
+                android:textSize="16sp"
                 android:textColor="@color/colorText"/>
         </LinearLayout>
         <TextView
             android:id="@+id/item_veganproduct_sourceVeganProduct"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|start"
-            android:layout_marginTop="-3dp"
+            android:textAlignment="textEnd"
+            android:layout_gravity="center_vertical|end"
             android:layout_marginLeft="10dp"
+            android:textSize="16sp"
             android:textColor="@color/colorText"/>
     </LinearLayout>
     <TextView
         android:id="@+id/item_veganproduct_backgroundRight"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="0.05"
+        android:layout_weight="0.1"
         android:textColor="@color/colorWrong"/>
 </LinearLayout>
